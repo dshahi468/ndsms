@@ -9,7 +9,7 @@ Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
+        'laravelVersion' => env('APP_VERSION'),
         'phpVersion' => PHP_VERSION,
     ]);
 });
